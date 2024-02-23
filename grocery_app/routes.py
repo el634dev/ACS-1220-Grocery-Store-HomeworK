@@ -87,7 +87,7 @@ def store_detail(store_id):
         # - flash a success message, and
         flash('Store was updated successfully.')
         # - redirect the user to the store detail page.
-        return redirect(url_for('main.store_details', store_id=store.id))
+        return redirect(url_for('main.store_detail', store_id=store.id))
     # Send the form to the template and use it to render the form fields
     store = GroceryStore.query.get(store_id)
     return render_template('store_detail.html', store=store, form=form)
